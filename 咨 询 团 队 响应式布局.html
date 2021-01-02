@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>咨 询 团 队</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .logo_main{
+            display: flex;
+            width: 86%;
+            padding-top: 170px;
+            flex-direction: column;
+            margin: 0 auto;
+
+        }
+        .logo_main img{
+            width: 10%;
+            margin:0 auto;
+        }
+        .logo_main h3{
+            width: 100%;
+            margin:0 auto;
+            font-weight: 500;
+            font-size: 50px;
+            padding-top:40px ;
+            text-align: center;
+            word-spacing: normal;
+        }
+        .logo_main p{
+            width:100%;
+            text-align: center;
+            margin:0 auto;
+            font-size: 20px;
+            line-height: 42px;
+            font-family: "宋体";
+        }
+        .logo_main span{
+            width: 17%;
+            text-align: center;
+            padding-top: 100px;
+            margin:0 auto;
+        }
+        .oimgs{
+            display: flex;
+            width: 86%;
+            justify-content: center;
+            margin: 0 auto;
+            padding-top: 30px;
+        }
+        .oimgs img{
+            width: 30%;
+            margin: 0 auto;
+        }
+        .ppai{
+            display: flex;
+            width: 86%;
+            margin: 0 auto;
+            flex-direction: column;
+        }
+        .ppai h1:first-child{
+            width: 40%;
+            font-weight: 500;
+            margin: 0 auto;
+            padding-top: 134px;
+            text-align: center;
+            font-size: 50px;
+            font-family: "宋体";
+        }
+        .ppai h1:last-child{
+            width: 33.33%;
+            font-weight: 500;
+            margin: 0 auto;
+            padding: 22px 0 149px;
+            text-align: center;
+            font-size: 50px;
+            font-family: "宋体";
+        }
+        /*  */
+        .fuwe{
+            display: flex;
+            width: 85%;
+            margin: 0 auto;
+            text-align: center;
+            flex-direction: column;
+            background-color: #f3f3f3;
+        }
+        .fuwe h1{
+            text-align: center;
+            margin: 0 auto;
+            font-weight: 500;
+            font-size: 36px;
+            text-align: center;
+            font-family: "宋体";
+            padding-bottom: 60px;
+            
+        }
+        .oul{
+            display: flex;
+            width: 85%;
+            margin: 0 auto;
+           
+            
+        } 
+        .oul li{
+            width: 40%;
+            list-style: none;
+            text-align: center;
+            font-weight: 500;
+            
+        }
+        .oul li h3{
+            width: 100%;
+            font-size: 18px;
+            font-family: "宋体";
+            text-align: center;
+        }
+        .oul li p{
+            width: 70%;
+            font-size: 18px;
+            text-align: center;
+            margin: 0 auto;
+            font-family: "宋体";
+            padding-bottom: 112px; 
+            
+        }
+        .hesuo{
+            width: 85%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+        .hesuo h1{
+            width: 50%;
+            text-align: center;
+            font-weight: 500;
+            font-family: "宋体";
+            font-size: 36px;
+            padding-top: 70px;
+
+        }
+        .boximg{
+            display: flex;
+            margin: 0 auto;
+            flex-direction: row;
+            justify-content: center;
+            padding-bottom: 152px;
+        }
+        .hesuo img{
+            width: 50%;
+            text-align: center;
+            margin: 0 10% 0;
+        }
+        .lianxi{
+            display: flex;
+            width: 86%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            color: white;
+
+            /*
+             background: #00ff00 url('smiley.gif') no-repeat fixed center;  
+             background:bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;
+             */
+            background: url(https://ccdn.goodq.top/caches/9dafe3262542e282c23c2401d5288ca4/aHR0cHM6Ly81ZjMxZjdkN2YzMzdhLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMjAvMDgvM2MzY2IyN2U2NjhlMGQ1OTZmNjFlM2M4ZDVmZjI5MzEuanBn.jpg)no-repeat fixed  center ;
+        }
+        .lianxi h1{
+            width: 60%;
+            font-weight: 500;
+            font-size: 36px;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+            
+        }
+        .text01{
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            color: white;
+            padding-bottom: 80px;
+            
+           
+            
+        }
+        .text01 span:nth-child(1){
+            width:30%;
+            border:white 2px solid;
+            border: white solid 2px ;
+            text-align: center;
+            margin-bottom: 50px;
+            margin-left: 2%;
+            line-height: 45px;
+            
+
+        }
+        .text01 span:nth-child(2){
+            width:30%;
+            height: 50px;
+            border:white 2px solid;
+            border: white solid 2px ;
+            text-align: center;
+            margin-bottom: 50px;
+            margin-left: 2%;
+            line-height: 45px;
+            
+        }
+        .botton{
+            display: flex;
+            width: 85%;
+            padding-top: 54px;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+        }
+        .tiaokun{
+            width: 85%;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            padding: 29px 0 30px;
+        }
+        .tiaokun p{
+            width: 10%;
+            text-align: center;
+            color: white;
+
+        }
+        .qwx{
+            width: 86%;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+        .qwx span{
+            width: 5%;
+            text-align: center;
+            padding-bottom: 56px;
+        }
+
+@media screen and (max-width: 768px){
+            /* body{
+                background-color: coral;
+            } */
+            .logo_main {
+                padding-top: 80px;
+            }
+            .logo_main img {
+                width: 38%;
+            }
+            .logo_main h3 {
+                font-size: 30px;
+            }
+            .logo_main p {
+                font-size: 18px;
+            }
+            .logo_main span {
+                padding-top: 50px;
+            }
+            .oimgs {
+                 flex-direction: column;
+            }
+            .oimgs img {
+                width: 100%;
+                margin: 10px auto 10px;
+            }
+            .ppai h1:first-child {
+                width: 100%;
+                font-size: 26px;
+            }
+            .ppai h1:last-child {
+                padding: 22px 0 58px;
+            }
+            .fuwe h1 {
+                font-size: 30px;
+            }
+            .oul {
+                display: flex;
+                justify-items: center;
+                flex-direction: column;
+            }
+            .fuwe {
+                width: 100%;
+            }
+            .oul li{
+                width: 81%;
+            }
+            .oul li p {
+                width: 91%;
+            }
+            .hesuo h1 {
+                padding-top: 26px;
+                font-size: 26px;
+            }
+            .boximg {
+                width: 39%;
+                padding-bottom: 46px;
+            }
+            .lianxi h1 {
+                width: 100%;
+                font-size: 22px;
+                padding-top: 20px;
+            }
+            .lianxi p{
+                width: 100%;
+                text-align: center;
+                color: white;
+            }
+            .text01 {
+                align-items: center;
+                margin: 0 auto;
+                flex-direction: column;
+                width: 77%;
+                display: flex;
+                color: white;
+            }
+            .text01 span:nth-child(1){
+                line-height: 31px;
+                width: 93%;
+                height: 42px;
+                margin-bottom: 21px;
+            }
+            .text01 span:nth-child(2) {
+                line-height: 29px;
+                width: 92%;
+                margin-bottom: 0px
+            }
+            .botton {
+                width: 100%;
+                padding-top: 37px;
+            }
+            .tiaokun p {
+                width: 24%;
+            }
+            .qwx {
+                width: 100%;
+            }
+            .qwx span {
+                width: 16%;
+                padding-bottom: 24px;
+            }
+
+}
+    </style>
+
+</head>
+<body>
+    <div class="logo_main">
+        <img src="https://ccdn.goodq.top/caches/9dafe3262542e282c23c2401d5288ca4/aHR0cHM6Ly81ZjMxZjdkN2YzMzdhLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMjAvMDgvOWY0MmUzODAxNjkyYzIyMjdkNGQ1ZjMyZTBlNjFkYTQuanBn.jpg" alt="">
+        <h3>一 站 式 品 牌 营 销 咨 询 团 队</h3>
+        <p>打通品牌+产品+流量+变现+持续变现的营销闭环</p>
+        <span>品牌设计公司.</span>
+    </div>
+    <div class="oimgs">
+        <img src="https://ccdn.goodq.top/caches/9dafe3262542e282c23c2401d5288ca4/aHR0cHM6Ly81ZjMxZjdkN2YzMzdhLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMjAvMDgvY2U3YmE1ZDYyZmE1ZjUxYzIwZjAwZTNmMjc3MWFkM2ItNjgweDY4MC5qcGc_p_p100_p_3D.jpg" alt="">
+        <img src="https://ccdn.goodq.top/caches/9dafe3262542e282c23c2401d5288ca4/aHR0cHM6Ly81ZjMxZjdkN2YzMzdhLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMjAvMDgvYTM0NTVjYjQ0ODUxYzQ2MGEwMTU5MTI1MjMyMzM4NjEtNTMxeDUzMS5wbmc_p_p100_p_3D.png" alt="">
+        <img src="https://ccdn.goodq.top/caches/9dafe3262542e282c23c2401d5288ca4/aHR0cHM6Ly81ZjMxZjdkN2YzMzdhLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMjAvMDgvZDZkMWZjZWZkZmExZGJiZDhjM2FhYmNhYmI3MzJlMzUtNjgweDY4MC5qcGc_p_p100_p_3D.jpg" alt="">
+        <img src="https://ccdn.goodq.top/caches/9dafe3262542e282c23c2401d5288ca4/aHR0cHM6Ly81ZjMxZjdkN2YzMzdhLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMjAvMDgvZjlkNzJkZjFmMjYyM2U4NGUyZDBlMDVmZDUyNDEzNjUtNjM0eDYzNC5qcGc_p_p100_p_3D.jpg" alt="">
+    </div>
+    <div class="ppai">
+        <h1>品牌全价值综合体系构建者专注创造和管理品牌 </h1>
+    </div>
+    <div class="fuwe">
+        <h1>服务项目 </h1>
+        <ul class="oul">
+            <li>
+                <h3>营销策划</h3>
+                <p>您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素您还可以添加图标，按钮，图片等常用元素</p>
+            </li>
+            <li>
+                <h3>空间规划</h3>
+                <p>您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素您还可以添加图标，按钮，图片等常用元素</p>
+            </li>
+            <li>
+                <h3>网络传媒</h3>
+                <p>您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素您还可以添加图标，按钮，图片等常用元素</p>
+            </li>
+        </ul>
+    </div>
+    <div class="hesuo">
+        <h1>合作品牌 </h1>
+        <div class="boximg">
+            <img src="https://ccdn.goodq.top/caches/9dafe3262542e282c23c2401d5288ca4/aHR0cHM6Ly81ZjMxZjdkN2YzMzdhLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMjAvMDgvNzJiYjc1NDViMThhYjVlNzVlNzI3NDVmYjAxYThhYTItMTYweDk1LnBuZw_p_p100_p_3D_p_p100_p_3D.png" alt="">
+            <img src="https://ccdn.goodq.top/caches/9dafe3262542e282c23c2401d5288ca4/aHR0cHM6Ly81ZjMxZjdkN2YzMzdhLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMjAvMDgvNDZmZjViZTBiMjU4NmM4NGM3MmVjNjZjYzk0ODc0ZGMtMTYweDk1LnBuZw_p_p100_p_3D_p_p100_p_3D.png" alt="">
+            <img src="https://ccdn.goodq.top/caches/9dafe3262542e282c23c2401d5288ca4/aHR0cHM6Ly81ZjMxZjdkN2YzMzdhLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMjAvMDgvNDllYjBmYjk1MjQwZDllMWYyN2JiMDcwNmIxZWY5YjgtMTYweDk1LnBuZw_p_p100_p_3D_p_p100_p_3D.png" alt="">
+            <img src="https://ccdn.goodq.top/caches/9dafe3262542e282c23c2401d5288ca4/aHR0cHM6Ly81ZjMxZjdkN2YzMzdhLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMjAvMDgvNjQ3ODkzYWNhMWM0MTczMjMwNTdiOWUyYmFkMTNjMzYtMTYweDk1LnBuZw_p_p100_p_3D_p_p100_p_3D.png" alt="">
+        </div>
+    </div>
+    <div class="lianxi">
+        <h1>联系我们</h1>
+        <p>获取联系</p>
+        <div class="text01">
+            <span>
+                电话联系：8008208209
+            </span>
+            <span>邮件联系</span>
+        </div>
+    </div>
+    <div class="botton">
+        <img src="https://ccdn.goodq.top/caches/9dafe3262542e282c23c2401d5288ca4/aHR0cHM6Ly81ZjMxZjdkN2YzMzdhLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMjAvMDgvOWY0MmUzODAxNjkyYzIyMjdkNGQ1ZjMyZTBlNjFkYTQtMTAweDYzLmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="">
+        <div class="tiaokun">
+            <p>服务条款</p>
+            <p>隐私政策</p>
+            <p>用户说明</p>
+        </div>
+        <div class="qwx">
+            <span>QQ</span>
+            <span>微博</span>
+            <span>微信</span>
+        </div>
+    </div>
+
+</body>
+</html>
