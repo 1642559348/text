@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取后台接口数据做渲染</title>
+</head>
+<body>
+    <input type="button" value="获取数据" id="btn">
+    <ul id="list">
+        <!-- <li data-id="g1">
+            <p>标题</p>
+            <p>￥7999</p>
+            <p>土豪金</p>
+        </li> -->
+    </ul>
+    <ul id="oul">
+
+    </ul>
+</body>
+<script>
+    /*
+        需求：
+             前端：通过ajax获取接口数据进行渲染
+    
+    */
+
+    (function(){
+        let btn=document.querySelector("#btn");
+        let list=document.querySelector('#list');
+        let oul=document.getElementById("oul");
+        btn.onclick=()=>{
+            //点击的时候获取数据
+
+            var xhr=new XMLHttpRequest();//创建对象
+            //1、告诉ajax想要什么？
+            /*
+            open(请求方式，接口路径，是否异步)设置你想要的请求的接口数据
+                参数一：请求方式，get和post
+                参数二：接口路径：如果是get请求，数据是拼接在URL后面进行传输
+                参数三：是否异步 true 异步https://v1.alapi.cn/api/joke
+            */
+
+            xhr.open('get','http://glapi.cn/163music/api.php?msg=光辉岁月&page=20',true);//1
+
+            //2、ajax帮发送请求
+            /*
+            send()
+                如果是get请求，参数写null
+                如果是post请求，发送的数据写在参数里面
+            
+            */
+
+            xhr.send(null);//2
+
+            //3、制作数据接口（就是做接口）
+            
+            //4、接收数据，做渲染
+            xhr.onreadystatechange=()=>{   //3  4
+              //   console.log(xhr.readyState);
+                if(xhr.readyState==4){
+                    //完成  不一定成功
+                    if(xhr.status==200){
+                        //成功
+                        // console.log(xhr.responseText);//返回字符串
+                        //字符串转为对象
+                        var arr=JSON.parse(xhr.responseText);
+                        console.log(arr);
+                        var html=arr.map(item=>{
+                            return `<li data-id="${item.gid}">
+                                        <p>${item.title}</p>
+                                        <p>${item.price}</p>
+                                        <p>${item.color}</p>
+                                    </li>`;
+                        }).join('');
+                        list.innerHTML=html;//渲染数据
+                    }
+                }
+            
+            }
+           
+        }
+    })()
+</script>
+</html>

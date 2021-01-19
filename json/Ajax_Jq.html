@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+    <script>
+        $(function(){
+           var  id=Math.random()*10;
+            $.ajax({
+                type:"POST",
+                url:"https://v1.alapi.cn/api/shici?type=all",
+                async:true,
+                dataType:"json",
+                success:function(res){
+                    console.log(res)
+                },
+                error:function(){
+                    console.log("666")
+                }
+                
+            })
+        });
+        var https=new XMLHttpRequest();
+        https.open("POST","https://v1.alapi.cn/api/shici",true);
+
+        https.send("type=all");
+        https.onreadystatechange=function(){
+            if(https.readyState==4){
+                if(https.status==200){
+                    console.log(https.responseText)
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
